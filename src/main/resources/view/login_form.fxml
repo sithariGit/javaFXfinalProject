@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b431d" height="98.0" stroke="#823636" strokeType="INSIDE" width="600.0" />
+        <Label layoutX="287.0" layoutY="37.0" text="Login" textFill="#ede9e9">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtEmail" layoutX="410.0" layoutY="168.0" promptText="email" />
+        <ImageView fitHeight="269.0" fitWidth="358.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/1.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="32.0" layoutY="360.0" prefHeight="45.0" prefWidth="278.0" text="colothifystore@gmail.com" textAlignment="RIGHT">
+            <font>
+                <Font name="System Bold Italic" size="16.0" />
+            </font>
+        </Label>
+        <JFXPasswordField fx:id="txtPassword" layoutX="410.0" layoutY="221.0" promptText="password" />
+        <JFXButton layoutX="454.0" layoutY="296.0" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #cd6133;" text="Login" textFill="#f6f6f6">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>

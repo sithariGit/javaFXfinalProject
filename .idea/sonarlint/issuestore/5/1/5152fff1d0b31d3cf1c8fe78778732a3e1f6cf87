@@ -1,0 +1,6 @@
+
+g	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8„áŒË2
+I
+java:S1602i",Remove useless curly braces around statement(ÿ€Ùå8á‡ŒË2
+e
+java:S1612i"HReplace this lambda with method reference 'employeeObservableList::add'.(ÿ€Ùå8ïçñ¼Ë2

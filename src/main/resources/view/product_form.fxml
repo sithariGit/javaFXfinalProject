@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@css/inventory_styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.ProductFormController">
+    <children>
+
+        <!-- Title Label -->
+        <Label layoutX="-2.0" layoutY="-1.0" prefHeight="59.0" prefWidth="670.0" style="-fx-background-color: #0a3d62;" styleClass="title-label" text="                                                 Product Management" textFill="#efe9e9">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+
+        <!-- Search Section -->
+        <HBox layoutX="20.0" layoutY="70.0" spacing="10" />
+
+        <!-- Product Table -->
+        <TableView fx:id="productTable" layoutX="4.0" layoutY="118.0" prefHeight="250.0" prefWidth="659.0" style="-fx-background-color: #fad390;">
+            <columns>
+                <TableColumn fx:id="colProductId" prefWidth="82.66665649414062" text="Product ID" />
+                <TableColumn fx:id="colSupplierId" prefWidth="90.66665649414062" text="Supplier ID" />
+                <TableColumn fx:id="colProductName" prefWidth="180.66665649414062" text="Product Name" />
+                <TableColumn fx:id="colCategory" prefWidth="98.0" text="Category" />
+                <TableColumn fx:id="colPrice" prefWidth="114.00006103515625" text="Price" />
+            <TableColumn fx:id="colStock" prefWidth="91.3333740234375" text="Stock" />
+            </columns>
+        </TableView>
+
+        <!-- Product Actions -->
+        <HBox layoutX="600.0" layoutY="400.0" spacing="10" />
+
+        <!-- Additional Detail Section for Adding Product (Future Enhancement) -->
+        <HBox layoutX="20.0" layoutY="400.0" prefHeight="59.0" prefWidth="600.0" spacing="10">
+            <JFXTextField fx:id="txtProductName" prefHeight="30.0" prefWidth="180.0" promptText="Product Name" />
+            <JFXComboBox fx:id="cmbCategory" prefHeight="30.0" prefWidth="150.0" promptText="Select Category" />
+            <JFXTextField fx:id="txtPrice" prefHeight="30.0" prefWidth="120.0" promptText="Price" />
+            <JFXTextField fx:id="txtStock" prefHeight="30.0" prefWidth="120.0" promptText="Stock" />
+        </HBox>
+         <JFXButton layoutX="320.0" layoutY="67.0" onAction="#btnSearchProductOnAction" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #60a3bc;" text="Search" />
+         <JFXTextField fx:id="txtSearchProduct" layoutX="20.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter Product Name or ID" />
+         <JFXButton layoutX="285.0" layoutY="459.0" onAction="#btnAddProductOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #60a3bc;" text="Add Product" />
+         <JFXButton layoutX="437.0" layoutY="459.0" onAction="#btnDeleteProductOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #60a3bc;" text="Remove Product" />
+
+    </children>
+</AnchorPane>

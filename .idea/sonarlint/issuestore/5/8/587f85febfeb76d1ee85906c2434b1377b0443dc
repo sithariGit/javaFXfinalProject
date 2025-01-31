@@ -1,0 +1,6 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(φα¤σ
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ΆΕό΄8Ρυ’Λ2
+W
+java:S1128"5Remove this unused import 'javafx.event.ActionEvent'.(ξ•―Όύÿÿÿÿ8Ρυ’Λ2

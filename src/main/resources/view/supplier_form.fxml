@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@css/inventory_styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.SupplierFormController">
+    <children>
+
+        <!-- Title Label -->
+        <Label layoutY="-2.0" prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #218c74;" styleClass="title-label" text="                                                   Supplier Management">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+
+        <!-- Search Section -->
+        <HBox layoutX="20.0" layoutY="70.0" spacing="10">
+            <JFXTextField fx:id="txtSearchSupplier" prefHeight="30.0" prefWidth="234.0" promptText="Enter Supplier Name or ID" />
+            <JFXButton onAction="#btnSearchSupplierOnAction" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #3c6382;" text="Search" textFill="#f2ebeb" />
+        </HBox>
+
+        <!-- Supplier Table -->
+        <TableView fx:id="supplierTable" layoutX="4.0" layoutY="113.0" prefHeight="203.0" prefWidth="589.0" style="-fx-background-color: #fad390;">
+            <columns>
+                <TableColumn fx:id="colSupplierId" prefWidth="86.66665887832642" text="Supplier ID" />
+                <TableColumn fx:id="colSupplierName" prefWidth="185.33331298828125" text="Supplier Name" />
+                <TableColumn fx:id="colContact" prefWidth="152.0" text="Contact" />
+                <TableColumn fx:id="colEmail" prefWidth="164.00002034505212" text="Email" />
+            </columns>
+        </TableView>
+
+        <!-- Supplier Actions -->
+        <HBox layoutX="550.0" layoutY="400.0" spacing="10" />
+
+        <!-- Additional Detail Section for Adding Supplier (Future Enhancement) -->
+        <HBox layoutX="7.0" layoutY="385.0" prefHeight="30.0" prefWidth="589.0" spacing="10">
+            <JFXTextField fx:id="txtSupplierName" prefHeight="30.0" prefWidth="182.0" promptText="Supplier Name" />
+            <JFXTextField fx:id="txtContact" prefHeight="51.0" prefWidth="171.0" promptText="Contact" />
+            <JFXTextField fx:id="txtEmail" prefHeight="30.0" prefWidth="249.0" promptText="Email" />
+        </HBox>
+         <JFXButton layoutX="156.0" layoutY="439.0" onAction="#btnAddSupplierOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #3c6382;" text="Add Supplier" textFill="#f4f0f0" />
+         <JFXButton layoutX="405.0" layoutY="439.0" onAction="#btnDeleteSupplierOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #3c6382;" text="Remove Supplier" textFill="#fbf3f3" />
+
+    </children>
+</AnchorPane>

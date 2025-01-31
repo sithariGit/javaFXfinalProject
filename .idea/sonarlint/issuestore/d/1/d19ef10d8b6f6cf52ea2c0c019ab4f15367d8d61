@@ -1,0 +1,12 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸Ð“™Ë2
+g	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸Ð“™Ë2
+g	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸Ð“™Ë2
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8ÕÐ“™Ë2
+i
+java:S20955"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµþÿÿÿÿ8ÕÐ“™Ë2
+q
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8ÕÐ“™Ë2
+^
+java:S1126^"AReplace this if-then-else statement by a single return statement.(˜Àñ—8æÐ“™Ë2

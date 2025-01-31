@@ -1,0 +1,19 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öá¤ó8ë—†¿Ë2
+l
+java:S2095S"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÉÜßË8¹™†¿Ë2
+q
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œÉ¿Ãøÿÿÿÿ8º™†¿Ë2
+q
+java:S2095>"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Äà´²úÿÿÿÿ8¹™†¿Ë2
+`
+java:S1854O">Remove this useless assignment to local variable "employeeId".(öãèÛùÿÿÿÿ8È™†¿Ë2
+X
+java:S6437&"6Revoke and change this password, as it is compromised.(¬ÔÅªúÿÿÿÿ8Ğ™†¿Ë2
+L
+java:S1481M"/Remove this unused "employeeId" local variable.(–úÒú8â™†¿Ë2
+M
+java:S1128	"+Remove this unused import 'model.Employee'.(ÍûŸÓúÿÿÿÿ8åØÑäË2
+D
+java:S1128
+"'Remove this unused import 'model.User'.(˜Ğ ñ8åØÑäË2

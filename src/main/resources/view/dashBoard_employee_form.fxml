@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardEmployeeController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#863306" height="500.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+        <JFXButton layoutX="6.0" layoutY="107.0" onAction="#btnLoadProductForm" style="-fx-background-color: #cc8e35;" text="Product Form" textFill="#f6f0f0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="14.0" layoutY="190.0" onAction="#btnLoadOrderForm" style="-fx-background-color: #cc8e35;" text="Order Form" textFill="#fbf7f7">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="4.0" layoutY="266.0" onAction="#btnLoadSupplierForm" style="-fx-background-color: #cc8e35;" text="Supplier Form" textFill="#fbf7f7">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+
+        <!-- AnchorPane to load content dynamically -->
+        <AnchorPane fx:id="loadContent" layoutX="146.0" minHeight="500.0" minWidth="600.0" prefHeight="500.0" prefWidth="529.0" />
+
+
+        <JFXButton layoutX="-1.0" layoutY="344.0" onAction="#btnInventoryForm" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: #cc8e35;" text="Inventory Form" textFill="#e9e5e5">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>
