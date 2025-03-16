@@ -7,47 +7,53 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@css/inventory_styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.ProductFormController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.ProductFormController">
     <children>
+        <!-- Header -->
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b3761" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+        <Label layoutX="232.0" layoutY="15.0" text="Product Form" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
 
-        <!-- Title Label -->
-        <Label layoutX="-2.0" layoutY="-1.0" prefHeight="59.0" prefWidth="670.0" style="-fx-background-color: #0a3d62;" styleClass="title-label" text="                                                 Product Management" textFill="#efe9e9">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
+        <!-- Product Fields -->
+        <JFXTextField fx:id="txtProductName" layoutX="207.0" layoutY="107.0" prefHeight="25.0" prefWidth="136.0" promptText="Product Name" />
 
-        <!-- Search Section -->
-        <HBox layoutX="20.0" layoutY="70.0" spacing="10" />
+        <!-- Supplier ComboBox -->
+        <JFXComboBox fx:id="cmbSupplierID" layoutX="36.0" layoutY="107.0" prefHeight="25.0" prefWidth="150.0" promptText="Supplier ID" />
 
-        <!-- Product Table -->
-        <TableView fx:id="productTable" layoutX="4.0" layoutY="118.0" prefHeight="250.0" prefWidth="659.0" style="-fx-background-color: #fad390;">
+        <!-- Category ComboBox -->
+        <JFXComboBox fx:id="cmbCategory" layoutX="400.0" layoutY="107.0" prefHeight="25.0" prefWidth="100.0" promptText="Category" />
+
+        <!-- Product Price and Stock -->
+        <JFXTextField fx:id="txtBuyingPrice" layoutX="36.0" layoutY="165.0" prefHeight="25.0" prefWidth="136.0" promptText=" Unit Price - Buying" />
+        <JFXTextField fx:id="txtBuyingQuantity" layoutX="207.0" layoutY="165.0" prefHeight="25.0" prefWidth="150.0" promptText="Quantity" />
+
+        <!-- Buttons -->
+        <JFXButton layoutX="182.0" layoutY="224.0" onAction="#btnAddProductOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #38ada9;" text="Add Product" textFill="#f6eeee" />
+
+        <JFXButton layoutX="326.0" layoutY="224.0" onAction="#btnUpdateProductOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #f39c12;" text="Update" textFill="#f2efef" />
+
+        <!-- Table for Product List -->
+        <TableView fx:id="tblProductList" layoutX="20.0" layoutY="282.0" prefHeight="195.0" prefWidth="556.0" style="-fx-background-color: #f7d794;">
             <columns>
-                <TableColumn fx:id="colProductId" prefWidth="82.66665649414062" text="Product ID" />
-                <TableColumn fx:id="colSupplierId" prefWidth="90.66665649414062" text="Supplier ID" />
-                <TableColumn fx:id="colProductName" prefWidth="180.66665649414062" text="Product Name" />
-                <TableColumn fx:id="colCategory" prefWidth="98.0" text="Category" />
-                <TableColumn fx:id="colPrice" prefWidth="114.00006103515625" text="Price" />
-            <TableColumn fx:id="colStock" prefWidth="91.3333740234375" text="Stock" />
+                <TableColumn fx:id="colProductId" prefWidth="64.66665649414062" text="Product ID" />
+                <TableColumn fx:id="colSupplierId" prefWidth="69.33334350585938" text="Supplier ID" />
+                <TableColumn fx:id="colProductName" prefWidth="136.66668701171875" text="Product Name" />
+                <TableColumn fx:id="colCategory" prefWidth="92.6666259765625" text="Category" />
+                <TableColumn fx:id="colQuantity" minWidth="1.33331298828125" prefWidth="84.0" text="Quantity" />
+                <TableColumn fx:id="colDate" prefWidth="107.3333740234375" text="Date" />
             </columns>
         </TableView>
-
-        <!-- Product Actions -->
-        <HBox layoutX="600.0" layoutY="400.0" spacing="10" />
-
-        <!-- Additional Detail Section for Adding Product (Future Enhancement) -->
-        <HBox layoutX="20.0" layoutY="400.0" prefHeight="59.0" prefWidth="600.0" spacing="10">
-            <JFXTextField fx:id="txtProductName" prefHeight="30.0" prefWidth="180.0" promptText="Product Name" />
-            <JFXComboBox fx:id="cmbCategory" prefHeight="30.0" prefWidth="150.0" promptText="Select Category" />
-            <JFXTextField fx:id="txtPrice" prefHeight="30.0" prefWidth="120.0" promptText="Price" />
-            <JFXTextField fx:id="txtStock" prefHeight="30.0" prefWidth="120.0" promptText="Stock" />
-        </HBox>
-         <JFXButton layoutX="320.0" layoutY="67.0" onAction="#btnSearchProductOnAction" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #60a3bc;" text="Search" />
-         <JFXTextField fx:id="txtSearchProduct" layoutX="20.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter Product Name or ID" />
-         <JFXButton layoutX="285.0" layoutY="459.0" onAction="#btnAddProductOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #60a3bc;" text="Add Product" />
-         <JFXButton layoutX="437.0" layoutY="459.0" onAction="#btnDeleteProductOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #60a3bc;" text="Remove Product" />
-
+        <JFXTextField fx:id="txtSellingPrice" layoutX="393.0" layoutY="165.0" prefHeight="25.0" prefWidth="136.0" promptText="Unit Price - Selling" />
+        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="45.0" text="Date : " textFill="#fbf6f6" />
+        <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="37.0" text="Time : " textFill="#f8f3f3" />
+      <Label fx:id="lblDate" layoutX="52.0" layoutY="2.0" prefHeight="25.0" prefWidth="88.0" text="dd-MM-yyyy" textFill="#ebe7e7" />
+      <Label fx:id="lblTime" layoutX="54.0" layoutY="38.0" prefHeight="25.0" prefWidth="100.0" text="00.00.00" textFill="#efeded" />
+      <JFXButton layoutX="33.0" layoutY="224.0" onAction="#btnSelectOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #f39c12;" text="Select" textFill="#fbf4f4" />
     </children>
 </AnchorPane>

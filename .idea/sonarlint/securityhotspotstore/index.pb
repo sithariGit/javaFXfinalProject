@@ -31,8 +31,6 @@ a
 1src/main/java/controller/LoginFormController.java,e\d\ed7cf1d3a0fe35d55dd99bc4007a7ab6f740cdf2
 i
 9src/main/java/controller/DashBoardEmployeeController.java,6\d\6dd155b899386eb18019e6d1d67d282887431e42
-e
-5src/main/java/controller/InventoryFormController.java,4\e\4efe3c5bf5a9cd1e85de269cf488550207fd1549
 o
 ?src/main/java/controller/inventory/InventoryFormController.java,8\6\863611b17a7c00fbba0ab8fa74ad6af3cf5c777b
 g
@@ -55,3 +53,5 @@ R
 "src/main/java/model/OrderItem.java,1\6\167b8d66074bc236df1ebb0ba4dbeb2f1f0e659c
 k
 ;src/main/java/controller/orderItem/OrderItemController.java,d\6\d649916f7ea42fa96a5e6c117cd566537304f090
+S
+#src/main/java/dto/tm/AddToCart.java,c\e\ce5c42b36c745fd91e3a28a1609688f8386a1aef

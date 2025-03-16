@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardAdminController">
+<AnchorPane prefHeight="500.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardAdminFormController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#863306" height="500.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
 
@@ -40,10 +40,10 @@
                 <Font size="18.0" />
             </font>
         </JFXButton>
-      <JFXButton layoutX="-1.0" layoutY="438.0" onAction="#btnInventoryForm" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #cc8e35;" text="Inventory Form" textFill="#e9e5e5">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </JFXButton>
+        <JFXButton layoutX="-1.0" layoutY="438.0" onAction="#btnInventoryForm" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: #cc8e35;" text="Inventory Form" textFill="#e9e5e5">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </JFXButton>
     </children>
 </AnchorPane>

@@ -6,45 +6,44 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@css/inventory_styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.SupplierFormController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.SupplierFormController">
     <children>
+        <!-- Header -->
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b3761" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+        <Label layoutX="225.0" layoutY="15.0" text="Supplier Form" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
 
-        <!-- Title Label -->
-        <Label layoutY="-2.0" prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #218c74;" styleClass="title-label" text="                                                   Supplier Management">
-         <font>
-            <Font size="19.0" />
-         </font></Label>
+        <!-- Supplier Fields -->
+        <JFXTextField fx:id="txtSupplierName" layoutX="36.0" layoutY="100.0" prefHeight="30.0" prefWidth="200.0" promptText="Supplier Name" />
+        <JFXTextField fx:id="txtSupplierEmail" layoutX="300.0" layoutY="100.0" prefHeight="30.0" prefWidth="200.0" promptText="Supplier Email" />
+        <JFXTextField fx:id="txtCompanyName" layoutX="36.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" promptText="Company Name" />
 
-        <!-- Search Section -->
-        <HBox layoutX="20.0" layoutY="70.0" spacing="10">
-            <JFXTextField fx:id="txtSearchSupplier" prefHeight="30.0" prefWidth="234.0" promptText="Enter Supplier Name or ID" />
-            <JFXButton onAction="#btnSearchSupplierOnAction" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #3c6382;" text="Search" textFill="#f2ebeb" />
-        </HBox>
+        <!-- Buttons -->
+        <JFXButton fx:id="btnAddSupplier" layoutX="136.0" layoutY="214.0" onAction="#btnAddSupplierOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #38ada9;" text="Add" textFill="WHITE" />
+        <JFXButton fx:id="btnUpdateSupplier" layoutX="247.0" layoutY="214.0" onAction="#btnUpdateSupplierOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #f39c12;" text="Update" textFill="WHITE" />
+        <JFXButton fx:id="btnDeleteSupplier" layoutX="364.0" layoutY="214.0" onAction="#btnDeleteSupplierOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE" />
+        <JFXButton fx:id="btnClearFields" layoutX="479.0" layoutY="214.0" onAction="#btnClearFieldsOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE" />
 
-        <!-- Supplier Table -->
-        <TableView fx:id="supplierTable" layoutX="4.0" layoutY="113.0" prefHeight="203.0" prefWidth="589.0" style="-fx-background-color: #fad390;">
+        <!-- Table for Supplier List -->
+        <TableView fx:id="tblSuppliers" layoutX="17.0" layoutY="275.0" prefHeight="205.0" prefWidth="566.0" style="-fx-background-color: #F8EFBA;">
             <columns>
-                <TableColumn fx:id="colSupplierId" prefWidth="86.66665887832642" text="Supplier ID" />
-                <TableColumn fx:id="colSupplierName" prefWidth="185.33331298828125" text="Supplier Name" />
-                <TableColumn fx:id="colContact" prefWidth="152.0" text="Contact" />
-                <TableColumn fx:id="colEmail" prefWidth="164.00002034505212" text="Email" />
+                <TableColumn fx:id="colSupplierId" prefWidth="77.33331298828125" text="Supplier ID" />
+                <TableColumn fx:id="colSupplierName" prefWidth="142.66665649414062" text="Supplier Name" />
+                <TableColumn fx:id="colEmail" minWidth="5.333282470703125" prefWidth="172.66668701171875" text="Email" />
+                <TableColumn fx:id="colCompanyName" prefWidth="172.0" text="Company" />
             </columns>
         </TableView>
-
-        <!-- Supplier Actions -->
-        <HBox layoutX="550.0" layoutY="400.0" spacing="10" />
-
-        <!-- Additional Detail Section for Adding Supplier (Future Enhancement) -->
-        <HBox layoutX="7.0" layoutY="385.0" prefHeight="30.0" prefWidth="589.0" spacing="10">
-            <JFXTextField fx:id="txtSupplierName" prefHeight="30.0" prefWidth="182.0" promptText="Supplier Name" />
-            <JFXTextField fx:id="txtContact" prefHeight="51.0" prefWidth="171.0" promptText="Contact" />
-            <JFXTextField fx:id="txtEmail" prefHeight="30.0" prefWidth="249.0" promptText="Email" />
-        </HBox>
-         <JFXButton layoutX="156.0" layoutY="439.0" onAction="#btnAddSupplierOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #3c6382;" text="Add Supplier" textFill="#f4f0f0" />
-         <JFXButton layoutX="405.0" layoutY="439.0" onAction="#btnDeleteSupplierOnAction" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #3c6382;" text="Remove Supplier" textFill="#fbf3f3" />
-
+      <Label layoutX="14.0" layoutY="7.0" prefHeight="17.0" prefWidth="57.0" text="Date : " />
+      <Label layoutX="15.0" layoutY="15.0" prefHeight="17.0" prefWidth="42.0" text="Label" textFill="#f4eeee" />
+      <Label layoutX="15.0" layoutY="42.0" prefHeight="17.0" prefWidth="42.0" text="Time : " textFill="#f2ecec" />
+      <Label fx:id="lblDate" layoutX="57.0" layoutY="15.0" prefHeight="17.0" prefWidth="105.0" text="dd-MM-yyyy" textFill="#fbf8f8" />
+      <Label fx:id="lblTime" layoutX="57.0" layoutY="42.0" prefHeight="17.0" prefWidth="85.0" text="00 : 00 : 00" textFill="#fdfafa" />
+      <JFXButton layoutX="25.0" layoutY="214.0" onAction="#btnSelectOnAction" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #f39c12;" text="Select" textFill="#f4f1f1" />
     </children>
 </AnchorPane>

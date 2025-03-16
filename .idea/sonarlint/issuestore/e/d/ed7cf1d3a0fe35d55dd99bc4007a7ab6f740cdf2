@@ -2,9 +2,9 @@
 m	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éþþ¾8¾Ô«˜Ë2
 m	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—·¹à8¾Ô«˜Ë2
 q
-java:S2095\"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ºÒ•èùÿÿÿÿ8ª–ÒäË2
-q
 java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ºÒ•èùÿÿÿÿ8ª–ÒäË2
+q
+java:S2095\"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ºÒ•èùÿÿÿÿ8ª–ÒäË2
 X
 java:S6437%"6Revoke and change this password, as it is compromised.(¬ÔÅªúÿÿÿÿ8ÈÔ«˜Ë2
 G	java:S106O"+Replace this use of System.out by a logger.(Ø¼¢ƒ8ßÔ«˜Ë2

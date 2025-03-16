@@ -1,6 +1,8 @@
 
-K
-java:S1121".Extract the assignment out of this expression.(É‚Á¨8ğ„ó„Ë2
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›¥Åùúÿÿÿÿ8ğ„ó„Ë2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºé8ÊĞ‡êÙ2
+¶
+java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(® ©ş8ÚĞ‡êÙ2
 S
-java:S6437"6Revoke and change this password, as it is compromised.(ÅÄ˜û8ù„ó„Ë2
+java:S6437"6Revoke and change this password, as it is compromised.(ÅÄ˜û8ù„ó„Ë2
+G	java:S106"+Replace this use of System.out by a logger.(ï¡•8äĞ‡êÙ2
+G	java:S106$"+Replace this use of System.out by a logger.(Ğ¥û§8æĞ‡êÙ2

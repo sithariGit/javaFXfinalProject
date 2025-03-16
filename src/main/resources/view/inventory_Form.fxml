@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InventoryFormController">
+    <children>
+        <!-- Header -->
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b3761" height="60.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+        <Label layoutX="229.0" layoutY="14.0" text="Inventory List" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <!-- Inventory Table -->
+        <TableView fx:id="tblInventory" layoutX="6.0" layoutY="76.0" prefHeight="410.0" prefWidth="587.0" style="-fx-background-color: #F8EFBA;">
+            <columns>
+                <TableColumn fx:id="colProductId" prefWidth="64.66666030883789" text="Product ID" />
+                <TableColumn fx:id="colSupplierId" prefWidth="70.6666488647461" text="Supplier ID" />
+                <TableColumn fx:id="colProductName" prefWidth="130.66665649414062" text="Product Name" />
+                <TableColumn fx:id="colBuyingPrice" prefWidth="114.66668701171875" text="Buying Price" />
+                <TableColumn fx:id="colSellingPrice" prefWidth="113.99993896484375" text="Selling Price" />
+                <TableColumn fx:id="colInStock" prefWidth="92.00006103515625" text="In Stock" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
